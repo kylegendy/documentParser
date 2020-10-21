@@ -19,13 +19,32 @@ Potentially, there could be an option to go through all directories within our t
 
 #### Specific Objects
 
-##### _DirFile Class_
+##### **DirFile Class**
 Holds standard information on every file.
-Standard information will include:
-* std::string fileName
-* date modified
-* ? file type ?
-* ? title ?
-* uint32_t wordCount
 
-##### _RadNode Template Class <T>_
+###### DirFile Member Variables:
+variable type and name | description
+-----------------------|------------
+std::string filename | the full filename, including the file type
+? date ? lastModified | the date of the last modification prior to its observation/analysis of this program #todo: ## figure out a good variable type for dates
+uint32_t wordCount | an unsigned integer of all the words in the file #todo: ## decide if this should only include valid trie words or any
+? file type ? | specifically holds the file type
+? title ? | the title of the file within the file itself, **not** the filename
+
+###### DireFile Methods:
+method signature | description
+-----------------|------------
+const &std::string getFilename() const; | returns filename
+void setFilename(std::string fName); | assigns filename
+const ? &date ? getLastModified() const; | returns lastModified
+void setLastModified(? date ? lastDate); | assigns lastModified
+const uint32_t getWordCount() const; | returns wordCount
+const std::string getFileType() const; | returns the filetype (ex: .txt, .md, .pdf, etc)
+void changeWordCnt(int32_t d); | changes the wordCount by d
+void setWordCount(uint32_t num); | sets the wordCount as num
+void incWC(uint32_t inc = 1); | increments the wordCount, default value is one
+void decWC(uint32_t dec = 1); | decrements the wordCount, default value is one
+
+
+##### **RadNode Template Class <T>**
+#todo: ## structure will depend on final decision of trie structure, currently researching best potential options... open to suggestions.  I'm reading further into burst tries at the moment, see [article](https://people.eng.unimelb.edu.au/jzobel/fulltext/acmtois02.pdf)
