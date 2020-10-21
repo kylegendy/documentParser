@@ -2,16 +2,15 @@
 
 ## Table of Contents
 
-1. [Description](#description)
-    1. [Outline](#outline)
-        1. [General](#general)
-        2. [Specific Objects](#specific_objects)
-            1. [DirFile Class](#dirfile-class)
-            2. [RadNode Template Class](#radnode-template-class)
+1. [Objective](#objective)
+1. [Outline](#outline)
+    1. [General](#general)
+    2. [Specific Objects](#specific_objects)
+        1. [DirFile Class](#dirfile-class)
+        2. [RadNode Template Class](#radnode-template-class)
 2. [Todos](#Todos)
 
-## Description
-### Objective
+## Objective
 
 The objective for this project is to create a cpp program that searches through any directory of your choice and know the priorities of which files to look through based on relevance to your input. 
 
@@ -19,30 +18,30 @@ For illustration, imagine: you run the executable, you plug in the path of your 
 
 The reason for this project is because I have consistenty been finding myself downloading a number of pdfs and "*command f-ing*" a bunch of words to see if that file had what I wanted or not.  Additionally the thought of creating my own personal search engine sounds fascinating.
 
-### Outline 
+## Outline 
 (as of 10/21/2020)
-#### General
+### General
 We'll need a class to hold standard information about each file, let's call that class DirFile.  Now, for searching and organizing, I toying with the idea of a radix trie: every string attached to every file will be in it, and at the end of the string will be a container of DirFile pointers for every DirFile that contains that word.  Our trie will use nodes that we can call RadNode.
 We will output our data into a serialized file for saving our data, allowing for quicker reload time after the initial compilation/review of the files in our directory.  The file will keep track of the last compilation's observed files and the last time these files were edited: thus, if we run our compilation again, we will know if we need to go through new files/newly edited files or even delete old files that are no longer in our directory.
 
 Potentially, there could be an option to go through all directories within our target directory (non-immediates included).
 
-#### Specific Objects
+### Specific Objects
 
-##### **DirFile Class**
+#### **DirFile Class**
 Holds standard information on every file.
 
-###### DirFile Member Variables:
-variable type and name | description
+**Member Variables:**
+type and name | description
 -----------------------|------------
 std::string filename | the full filename, including the file type
-? date ? lastModified | the date of the last modification prior to its observation/analysis of this program
+? date ? lastModified | the date of the last modification prior to the last observation of the file
 uint32_t wordCount | an unsigned integer of all the words in the file
-? file type ? | specifically holds the file type
-? title ? | the title of the file within the file itself, **not** the filename
+? std::string fileType ? | specifically holds the file type
+? std::string title ? | the title of the file within the file itself, **not** the filename
 
-###### DireFile Methods:
-method signature | description
+**Methods:**
+signature | description
 -----------------|------------
 const &std::string getFilename() const; | returns filename
 void setFilename(std::string fName); | assigns filename
@@ -56,7 +55,7 @@ void incWC(uint32_t inc = 1); | increments the wordCount, default value is one
 void decWC(uint32_t dec = 1); | decrements the wordCount, default value is one
 
 
-##### **RadNode Template Class**
+#### **RadNode Template Class**
 
 
 ## Todos:
