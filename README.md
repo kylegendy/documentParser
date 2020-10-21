@@ -36,7 +36,7 @@ Holds standard information on every file.
 variable type and name | description
 -----------------------|------------
 std::string filename | the full filename, including the file type
-? date ? lastModified | the date of the last modification prior to its observation/analysis of this program #todo: ## figure out a good variable type for dates
+? date ? lastModified | the date of the last modification prior to its observation/analysis of this program
 uint32_t wordCount | an unsigned integer of all the words in the file
 ? file type ? | specifically holds the file type
 ? title ? | the title of the file within the file itself, **not** the filename
