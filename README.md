@@ -6,8 +6,8 @@
     1. [Outline](#outline)
         1. [General](#general)
         2. [Specific Objects](#specific_objects)
-            1. [DirFile Class](#dirfile_class)
-            2. [RadNode Template Class](#radnode_template_class)
+            1. [DirFile Class](#dirfile-class)
+            2. [RadNode Template Class](#radnode-template-class)
 2. [Todos](#Todos)
 
 ## Description
@@ -56,7 +56,7 @@ void incWC(uint32_t inc = 1); | increments the wordCount, default value is one
 void decWC(uint32_t dec = 1); | decrements the wordCount, default value is one
 
 
-##### **RadNode Template Class <T>**
+##### **RadNode Template Class**
 
 
 ## Todos:
