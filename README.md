@@ -19,7 +19,7 @@ Potentially, there could be an option to go through all directories within our t
 
 #### Specific Objects
 
-##### DirFile Class
+##### _DirFile Class_
 Holds standard information on every file.
 Standard information will include:
 * std::string fileName
@@ -28,4 +28,4 @@ Standard information will include:
 * ? title ?
 * uint32_t wordCount
 
-##### RadNode Template Class <T>
+##### _RadNode Template Class <T>_
