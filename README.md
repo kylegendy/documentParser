@@ -21,10 +21,10 @@ The reason for this project is because I have consistenty been finding myself do
 ## Outline 
 (as of 10/21/2020)
 ### General
-We'll need a class to hold standard information about each file, let's call that class DirFile.  Now, for searching and organizing, I toying with the idea of a radix trie: every string attached to every file will be in it, and at the end of the string will be a container of DirFile pointers for every DirFile that contains that word.  Our trie will use nodes that we can call RadNode.
+We'll need a class to hold standard information about each file (most likely strings), let's call that class DirFile.  Now, for searching and organizing, I'm toying with the idea of a radix trie: every string attached to every file will be in it, and at the end of the string will be a container of DirFile pointers for every DirFile that contains that word.  Our trie will use nodes that we can call RadNode.
 We will output our data into a serialized file for saving our data, allowing for quicker reload time after the initial compilation/review of the files in our directory.  The file will keep track of the last compilation's observed files and the last time these files were edited: thus, if we run our compilation again, we will know if we need to go through new files/newly edited files or even delete old files that are no longer in our directory.
 
-Potentially, there could be an option to go through all directories within our target directory (non-immediates included).
+There could an option to go through all directories within our target directory (non-immediates included).
 
 ### Specific Objects
 
@@ -65,3 +65,5 @@ void decWC(uint32_t dec = 1); | decrements the wordCount, default value is one
 - [ ] Decide if wordCount should only include valid trie words or any that and all that is within file.
 
 - [ ] Determine structure for valid words list that can be saveable/loadable and customizeable
+
+- [ ] Potentially benefitial to abstract DirFile class, allowing for modular structure in case I change how I'm keying my files (ie not using words anymore).
