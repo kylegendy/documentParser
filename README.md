@@ -62,6 +62,8 @@ void decWC(uint32_t dec = 1); | decrements the wordCount, default value is one
 
 - [ ] The structure of RadNode will depend on final decision of trie structure, currently researching best potential options... open to suggestions.  I'm reading further into burst tries at the moment, see [article](https://people.eng.unimelb.edu.au/jzobel/fulltext/acmtois02.pdf).  **Can't begin its outline until this is decided**.
 
+- [ ] Found new article, way better:[article](https://crpit.scem.westernsydney.edu.au/abstracts/CRPITV62Askitis.html)
+
 - [ ] Decide if wordCount should only include valid trie words or any that and all that is within file.
 
 - [ ] Determine structure for valid words list that can be saveable/loadable and customizeable
